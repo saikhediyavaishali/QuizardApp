@@ -1,0 +1,84 @@
+.quiz {
+    height: 100vh;
+    width: 100%;
+    border: 1px solid black;
+    background-image: url("C:\Users\shalini\Downloads\BG1.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.box {
+    height: 70vh;
+    width: 80%; /* Adjusted width for smaller screens */
+    max-width: 400px; /* Set a max-width for larger screens */
+    border: 1px solid transparent;
+    background-color: white;
+    margin: 0 auto; /* Center the box horizontally */
+    margin-top: 3px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px;
+}
+
+.question {
+    margin: 18px;
+    border-radius: 5px;
+    font-size: large;
+    padding: 5px;
+    box-shadow: 0px 0px 10px;
+    height: 25vh; /* Adjusted height for better compatibility */
+    display: flex;
+    justify-content: center;
+}
+
+.option {
+    display: flex;
+    margin: 6px 4px;
+    padding: 10px;
+    flex-direction: column;
+    width: 100%;
+}
+
+.option-btn {
+    box-shadow: 0px 0px 10px;
+    padding: 10px; /* Increased padding for better touch interaction */
+    border-radius: 5px; /* Adjusted border-radius for a smoother look */
+    border: 1px solid transparent;
+    outline: none;
+    transition: 0.3s;
+    margin: 5px;
+    min-height: 40px; /* Adjusted min-height for better visibility */
+    background-color: white;
+    width: 90%;
+    font-size: large;
+}
+
+.option-btn:hover {
+    background-color: gray;
+}
+
+.checked {
+    background-color: rgb(159, 84, 159);
+    color: white;
+    box-shadow: 3px 3px 2px 1px;
+}
+
+/* Media queries for responsiveness */
+@media (min-width: 768px) {
+    .box {
+        width: 60%;
+    }
+
+    .question {
+        height: 14vh;
+    }
+}
+
+@media (min-width: 992px) {
+    .box {
+        width: 35%;
+    }
+
+    .question {
+        height: 8vh;
+    }
+}

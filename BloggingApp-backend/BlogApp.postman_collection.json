@@ -1,0 +1,401 @@
+{
+	"info": {
+		"_postman_id": "d86ddf72-35e7-4fab-b236-d6356de79924",
+		"name": "BlogApp",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25933715"
+	},
+	"item": [
+		{
+			"name": "userCollection",
+			"item": [
+				{
+					"name": "SignUp",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "userName",
+									"value": "Jayesh Cholkar",
+									"type": "text"
+								},
+								{
+									"key": "userEmail",
+									"value": "jayeshcholkar1@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "userPassword",
+									"value": "123456",
+									"type": "text"
+								},
+								{
+									"key": "userCity",
+									"value": "Indore",
+									"type": "text"
+								},
+								{
+									"key": "userState",
+									"value": "MP",
+									"type": "text"
+								},
+								{
+									"key": "userPhone",
+									"value": "1234567890",
+									"type": "text"
+								},
+								{
+									"key": "profilePic",
+									"type": "file",
+									"src": "/C:/Users/jaych/Downloads/instagram.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8000/user/signup",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"user",
+								"signup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userEmail\" : \"Jaycholker@gmail.com\",\r\n    \"userPassword\" : \"654321\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/user/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"user",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ForgetPassword",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userEmail\" : \"Jaycholker@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/user/forgotpassword",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"user",
+								"forgotpassword"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "resetPassword",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"newPassword\" : \"654321\",\r\n    \"confirmPassword\" : \"654321\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/user/resetpassword/645a32c6622c159d22e8c9dd/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjY0NWEzMmM2NjIyYzE1OWQyMmU4YzlkZCIsInVzZXJOYW1lIjoiSmF5ZXNoIGNob2xrYXIiLCJ1c2VyRW1haWwiOiJKYXljaG9sa2VyQGdtYWlsLmNvbSIsInVzZXJQYXNzd29yZCI6IjEyMzQ1NiIsInVzZXJDaXR5IjoiSW5kb3JlIiwidXNlclN0YXRlIjoiTVAiLCJ1c2VyUGhvbmUiOjEyMzQ1Njc4OTAsInVzZXJSb2xlIjoidXNlciIsImlzQWN0aXZlIjp0cnVlLCJjcmVhdGVkQXQiOiIyMDIzLTA1LTA5VDExOjQ3OjE4LjkxOVoiLCJ1cGRhdGVkQXQiOiIyMDIzLTA1LTEwVDE0OjMxOjM4LjY1MFoiLCJfX3YiOjB9LCJpYXQiOjE2ODM3Mjk2MjgsImV4cCI6MTY4MzcyOTkyOH0.pyG4QW98KNtcxXD5No9hw4YTCd2k9oK7Qjn9LhbWLw0",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"user",
+								"resetpassword",
+								"645a32c6622c159d22e8c9dd",
+								"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjY0NWEzMmM2NjIyYzE1OWQyMmU4YzlkZCIsInVzZXJOYW1lIjoiSmF5ZXNoIGNob2xrYXIiLCJ1c2VyRW1haWwiOiJKYXljaG9sa2VyQGdtYWlsLmNvbSIsInVzZXJQYXNzd29yZCI6IjEyMzQ1NiIsInVzZXJDaXR5IjoiSW5kb3JlIiwidXNlclN0YXRlIjoiTVAiLCJ1c2VyUGhvbmUiOjEyMzQ1Njc4OTAsInVzZXJSb2xlIjoidXNlciIsImlzQWN0aXZlIjp0cnVlLCJjcmVhdGVkQXQiOiIyMDIzLTA1LTA5VDExOjQ3OjE4LjkxOVoiLCJ1cGRhdGVkQXQiOiIyMDIzLTA1LTEwVDE0OjMxOjM4LjY1MFoiLCJfX3YiOjB9LCJpYXQiOjE2ODM3Mjk2MjgsImV4cCI6MTY4MzcyOTkyOH0.pyG4QW98KNtcxXD5No9hw4YTCd2k9oK7Qjn9LhbWLw0"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "BlogCollection",
+			"item": [
+				{
+					"name": "createBlog",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyRGF0YSI6eyJfaWQiOiI2NDVhMzJjNjYyMmMxNTlkMjJlOGM5ZGQiLCJ1c2VyTmFtZSI6IkpheWVzaCBjaG9sa2FyIiwidXNlckVtYWlsIjoiSmF5Y2hvbGtlckBnbWFpbC5jb20iLCJ1c2VyUGFzc3dvcmQiOiIkMmIkMTAkM1ZwU3kuak1DM1BMWmViLjJJMGI4LnkybDNqM0JmUHBWaU9raHc0S0xRN0ViczgvR1lVR1MiLCJ1c2VyQ2l0eSI6IkluZG9yZSIsInVzZXJTdGF0ZSI6Ik1QIiwidXNlclBob25lIjoxMjM0NTY3ODkwLCJ1c2VyUm9sZSI6InVzZXIiLCJpc0FjdGl2ZSI6dHJ1ZSwiY3JlYXRlZEF0IjoiMjAyMy0wNS0wOVQxMTo0NzoxOC45MTlaIiwidXBkYXRlZEF0IjoiMjAyMy0wNS0xMFQxNDo0MDo1My4wODJaIiwiX192IjowfSwiaWF0IjoxNjgzODkwNjMyLCJleHAiOjE2ODM4OTQyMzJ9.n9_rRmvphxQfjeY5nB91tovsBOKcbWbBL1rwFtkF4jc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\" : \"Hello Blog\",\r\n    \"description\" : \"This is description jayesh\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/blog/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"blog",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "allBlogs",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyRGF0YSI6eyJfaWQiOiI2NDVhMzJjNjYyMmMxNTlkMjJlOGM5ZGQiLCJ1c2VyTmFtZSI6IkpheWVzaCBjaG9sa2FyIiwidXNlckVtYWlsIjoiSmF5Y2hvbGtlckBnbWFpbC5jb20iLCJ1c2VyUGFzc3dvcmQiOiIkMmIkMTAkM1ZwU3kuak1DM1BMWmViLjJJMGI4LnkybDNqM0JmUHBWaU9raHc0S0xRN0ViczgvR1lVR1MiLCJ1c2VyQ2l0eSI6IkluZG9yZSIsInVzZXJTdGF0ZSI6Ik1QIiwidXNlclBob25lIjoxMjM0NTY3ODkwLCJ1c2VyUm9sZSI6InVzZXIiLCJpc0FjdGl2ZSI6dHJ1ZSwiY3JlYXRlZEF0IjoiMjAyMy0wNS0wOVQxMTo0NzoxOC45MTlaIiwidXBkYXRlZEF0IjoiMjAyMy0wNS0xMFQxNDo0MDo1My4wODJaIiwiX192IjowfSwiaWF0IjoxNjgzODg5MDA0LCJleHAiOjE2ODM4OTI2MDR9.JTtOtKcM1guA_wZn99xtLpk2vLhdcvuVMBDnkPalzvc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/blog/blogs?search=jay",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"blog",
+								"blogs"
+							],
+							"query": [
+								{
+									"key": "search",
+									"value": "jay"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteBlog",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyRGF0YSI6eyJfaWQiOiI2NDVhMzJjNjYyMmMxNTlkMjJlOGM5ZGQiLCJ1c2VyTmFtZSI6IkpheWVzaCBjaG9sa2FyIiwidXNlckVtYWlsIjoiSmF5Y2hvbGtlckBnbWFpbC5jb20iLCJ1c2VyUGFzc3dvcmQiOiIkMmIkMTAkM1ZwU3kuak1DM1BMWmViLjJJMGI4LnkybDNqM0JmUHBWaU9raHc0S0xRN0ViczgvR1lVR1MiLCJ1c2VyQ2l0eSI6IkluZG9yZSIsInVzZXJTdGF0ZSI6Ik1QIiwidXNlclBob25lIjoxMjM0NTY3ODkwLCJ1c2VyUm9sZSI6InVzZXIiLCJpc0FjdGl2ZSI6dHJ1ZSwiY3JlYXRlZEF0IjoiMjAyMy0wNS0wOVQxMTo0NzoxOC45MTlaIiwidXBkYXRlZEF0IjoiMjAyMy0wNS0xMFQxNDo0MDo1My4wODJaIiwiX192IjowfSwiaWF0IjoxNjgzODg5MDA0LCJleHAiOjE2ODM4OTI2MDR9.JTtOtKcM1guA_wZn99xtLpk2vLhdcvuVMBDnkPalzvc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/blog/delete/645deba3aca27936c07155ae",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"blog",
+								"delete",
+								"645deba3aca27936c07155ae"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "BlogLike",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/blog/likes/645debe5aca27936c07155b4/true",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"blog",
+								"likes",
+								"645debe5aca27936c07155b4",
+								"true"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "blogDetails",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "commentCollection",
+			"item": [
+				{
+					"name": "addComment",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/comment/add/645e21d51964523964afe089",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"comment",
+								"add",
+								"645e21d51964523964afe089"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "editComment",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyRGF0YSI6eyJfaWQiOiI2NDVhMzJjNjYyMmMxNTlkMjJlOGM5ZGQiLCJ1c2VyTmFtZSI6IkpheWVzaCBjaG9sa2FyIiwidXNlckVtYWlsIjoiSmF5Y2hvbGtlckBnbWFpbC5jb20iLCJ1c2VyUGFzc3dvcmQiOiIkMmIkMTAkM1ZwU3kuak1DM1BMWmViLjJJMGI4LnkybDNqM0JmUHBWaU9raHc0S0xRN0ViczgvR1lVR1MiLCJ1c2VyQ2l0eSI6IkluZG9yZSIsInVzZXJTdGF0ZSI6Ik1QIiwidXNlclBob25lIjoxMjM0NTY3ODkwLCJ1c2VyUm9sZSI6InVzZXIiLCJpc0FjdGl2ZSI6dHJ1ZSwiY3JlYXRlZEF0IjoiMjAyMy0wNS0wOVQxMTo0NzoxOC45MTlaIiwidXBkYXRlZEF0IjoiMjAyMy0wNS0xMFQxNDo0MDo1My4wODJaIiwiX192IjowfSwiaWF0IjoxNjgzOTgwMjI4LCJleHAiOjE2ODM5ODM4Mjh9.VaU89Tdl-hv7e96XCQxM07djauBSBWn1iPxP6CNytx0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"comment\" : \"THis is the first comment updated second time\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/comment/edit/645f80704082a465351554c5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"comment",
+								"edit",
+								"645f80704082a465351554c5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteComment",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/comment/delete/645e21d51964523964afe089",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"comment",
+								"delete",
+								"645e21d51964523964afe089"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

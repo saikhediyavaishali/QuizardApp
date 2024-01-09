@@ -1,0 +1,63 @@
+.home {
+    height: 120vh;
+    width: 100%;
+    border: 2px solid black;
+    border-radius: 10px;
+    background-image: url("C:\Users\shalini\Downloads\BG1.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.home1 {
+    height: 90vh;
+    width: 80%; /* Adjusted width for smaller screens */
+    max-width: 400px;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    background-color: #3aaccb;
+    margin: 30px auto;
+    box-shadow: 4px 4px 10px;
+}
+
+.img {
+    height: 35vh;
+    width: 90%; /* Adjusted width for smaller screens */
+    max-width: 300px;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    background-image: url("C:\Users\shalini\Downloads\quiz.jfif");
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0 auto;
+}
+
+/* Media queries for responsiveness */
+@media (min-width: 600px) {
+    .home1 {
+        width: 50%;
+    }
+
+    .img {
+        width: 70%;
+    }
+}
+
+@media (min-width: 768px) {
+    .home1 {
+        width: 40%;
+    }
+
+    .img {
+        width: 60%;
+    }
+}
+
+@media (min-width: 992px) {
+    .home1 {
+        width: 30%;
+    }
+
+    .img {
+        width: 50%;
+    }
+}

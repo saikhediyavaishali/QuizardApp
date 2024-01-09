@@ -1,0 +1,34 @@
+.login {
+    border: 2px solid black;
+    height: 100vh; /* Adjusted height for better compatibility */
+    width: 100%;
+    margin: auto;
+    background-image: url("C:\Users\shalini\Downloads\BG1.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.log {
+    border: 1px solid black;
+    width: 80%; /* Adjusted width for smaller screens */
+    max-width: 400px; /* Set a max-width for larger screens */
+    height: 60vh; /* Adjusted height for smaller screens */
+    margin: 50px auto;
+    border-radius: 10px;
+    background-color: white;
+}
+
+/* Media queries for responsiveness */
+@media (min-width: 768px) {
+    .log {
+        width: 30%;
+        height: 70vh;
+    }
+}
+
+@media (min-width: 992px) {
+    .log {
+        width: 33%;
+        height: 80vh;
+    }
+}
